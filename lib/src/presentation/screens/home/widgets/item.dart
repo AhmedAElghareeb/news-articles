@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_articles/src/core/styles.dart';
-import 'package:news_articles/src/presentation/dummy_data/dummy.dart';
+import 'package:news_articles/src/domain/entities/news_articles.dart';
+// import 'package:news_articles/src/presentation//screens/home/dummy_data/dummy.dart';
 
 class CardItem extends StatelessWidget {
   const CardItem({
@@ -9,7 +10,7 @@ class CardItem extends StatelessWidget {
     required this.data,
   });
 
-  final DummyData data;
+  final Articles data;
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +34,8 @@ class CardItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image(
-            image: data.image,
+          Image.network(
+            data.urlToImage,
           ),
           const SizedBox(
             height: 20,
@@ -54,14 +55,14 @@ class CardItem extends StatelessWidget {
                   height: 20,
                 ),
                 Text(
-                  data.desc,
+                  data.description,
                   style: AppStyles.font13RegularBlack,
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 Text(
-                  data.date,
+                  data.publishedAt,
                   style: AppStyles.font12SemiBoldGrey600,
                 ),
               ],
