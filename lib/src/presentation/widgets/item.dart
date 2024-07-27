@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:news_articles/src/core/styles.dart';
 import 'package:news_articles/src/presentation/dummy_data/dummy.dart';
 
 class CardItem extends StatelessWidget {
@@ -47,31 +48,21 @@ class CardItem extends StatelessWidget {
               children: [
                 Text(
                   data.title,
-                  style: TextStyle(
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: AppStyles.font16BoldBlack,
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 Text(
                   data.desc,
-                  style: TextStyle(
-                    fontSize: 13.sp,
-                    fontWeight: FontWeight.w400,
-                  ),
+                  style: AppStyles.font13RegularBlack,
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 Text(
                   data.date,
-                  style: TextStyle(
-                    fontSize: 12.sp,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.grey[600],
-                  ),
+                  style: AppStyles.font12SemiBoldGrey600,
                 ),
               ],
             ),
