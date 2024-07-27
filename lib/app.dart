@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_articles/src/core/theme.dart';
-import 'package:news_articles/src/presentation/ui/home_view.dart';
+import 'package:news_articles/src/presentation/screens/home/ui/home_view.dart';
 
 class NewsArticles extends StatelessWidget {
   const NewsArticles({super.key});
